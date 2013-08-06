@@ -1,6 +1,25 @@
 body {
 	background: url('bg.png') repeat;
 }
+h1 {
+	font-size: 60px;
+}
+.container {
+	/*position: relative;*/
+	width: 800px;
+	margin: auto;
+	margin-bottom: 100px;
+}
+.title { 
+	width: 100%;
+	text-align: center;
+}
+.left_col, .right_col { 
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	padding: 10px;
+}
 .info {
-	font-size: 18px;
+	font-size: 24px;
 }
