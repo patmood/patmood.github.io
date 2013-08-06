@@ -1,2 +1,2 @@
 # Patrick Moody
-#### [http://patmood.github.io/](patmood.github.io/)
+#### [patmood.github.io](http://patmood.github.io/)
