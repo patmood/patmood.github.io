@@ -70,6 +70,9 @@ li:hover a { color: #444; }
   margin: auto;
   cursor: pointer;
 }
+.email-me:hover{
+  background: #27ae60;
+}
 .email-me input {
   padding: 6px;
   color: #444;
