@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Cabin+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700italic);
 
 body {
 	background: url('bg.png') repeat;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Lato, Calibri, Arial, sans-serif;
 }
 h1 {
 	font-size: 60px;
@@ -70,6 +71,7 @@ li:hover a { color: #444; }
 .email-me {
   background: #2ecc71;
   color: #fff;
+  position: relative;
   text-align: center;
   font-size: 32px;
   text-decoration: none;
@@ -82,9 +84,14 @@ li:hover a { color: #444; }
   display: block;
   margin: auto;
   cursor: pointer;
+  box-shadow: 0 6px #27ae60;
+  letter-spacing: 1px;
+  font-weight: 700px;
+  text-transform: uppercase;
 }
 .email-me:hover{
-  background: #27ae60;
+  top: 2px;
+  box-shadow: 0 4px #27ae60;
 }
 .email-me input {
   padding: 6px;
@@ -96,10 +103,13 @@ li:hover a { color: #444; }
 }
 .button {
   background: #3498db;
+  position: relative;
   color: #fff;
+  letter-spacing: 1px;
+  font-weight: 700px;
   text-align: center;
   text-decoration: none;
-  padding: 10px;
+  padding: 15px 30px;
   border: none;
   display: inline-block;
   -webkit-border-radius: 5px;
@@ -107,8 +117,17 @@ li:hover a { color: #444; }
   border-radius: 5px;
   cursor: pointer;
   margin-right: 5px;
+  text-transform: uppercase;
+  box-shadow: 0 6px #2980b9;
 }
-.button:hover { background-color: #2980b9}
+.button:hover {
+  top: 2px;
+  box-shadow: 0 4px #2980b9;
+}
+.button:active {
+  top: 6px;
+  box-shadow: 0 0px #2980b9;
+}
 
 .site-preview {
   border: solid 1px #ccc;
