@@ -16,6 +16,14 @@ h2 {
   font-family: 'Cabin Condensed', sans-serif;
   color: #222;
 }
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #005580;
+  text-decoration: underline;
+}
 p {
   font-size: 18px;
   color: #444;
@@ -123,6 +131,8 @@ li:hover a { color: #444; }
 .button:hover {
   top: 2px;
   box-shadow: 0 4px #2980b9;
+  color: #fff;
+  text-decoration: none;
 }
 .button:active {
   top: 6px;
