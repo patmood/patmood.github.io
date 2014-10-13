@@ -1,0 +1,13 @@
+{
+  "projects": [
+  {
+    "name": "test 1"
+  , "image": "http://placekitten.com"
+  , "description": "This is a description of the project"
+  }
+, {
+    "name": "test 1"
+  , "image": "http://placekitten.com"
+  , "description": "This is a description of the project"
+  }
+] }
