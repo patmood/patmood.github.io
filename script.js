@@ -6,16 +6,15 @@ $(function() {
     $('.email-me input').select()
     $(this).unbind('click')
   })
-
-  // Populate project info
-  // $.getJSON('projects.json', function(data) {
-  //   data.projects.forEach(function(project) {
-  //     $('#projects').append(_.template(projectTemplate, project))
-  //   })
-  // })
 })
 
 // BACKBONE
+var Project = Backbone.Model.extend({})
+var Projects = Backbone.Collection.extend({
+  model: Project
+, url: '/projects.json'
+})
+
 var IndexView = Backbone.View.extend({
   el: '#content'
 , render: function() {
@@ -27,8 +26,14 @@ var IndexView = Backbone.View.extend({
 var ProjectsView = Backbone.View.extend({
   el: '#content'
 , render: function() {
-    var projects = {}
-    var template = _.template($('#project-template').html(), projects)
+    var template = _.template($('#projects-template').html(), this.model)
+    this.$el.html(template)
+
+    // TODO: Render a individual project views here
+    var projectTemplate = $('#project-template').html()
+    _.each(this.model.models, function(project) {
+      $('#projects').append(_.template(projectTemplate, project.attributes))
+    })
   }
 })
 
@@ -39,6 +44,14 @@ var AppRouter = Backbone.Router.extend({
   }
 , index: function() {
     new IndexView().render()
+  }
+, projects: function() {
+    var projects = new Projects()
+    projects.fetch({
+      success: function(projects) {
+        new ProjectsView({ model: projects }).render()
+      }
+    })
   }
 })
 
