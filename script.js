@@ -1,18 +1,6 @@
-// On Ready
-$(function() {
-  // Email button click
-  $('.email-me').on('click', function() {
-    $(this).html('<input type="text" value="patrick.n.moody@gmail.com">')
-    $('.email-me input').select()
-    $(this).unbind('click')
-  })
-})
-
 // BACKBONE
-var Project = Backbone.Model.extend({})
 var Projects = Backbone.Collection.extend({
-  model: Project
-, url: '/projects.json'
+  url: '/projects.json'
 })
 
 var IndexView = Backbone.View.extend({
@@ -20,6 +8,16 @@ var IndexView = Backbone.View.extend({
 , render: function() {
     var template = _.template($('#index-template').html())
     this.$el.html(template)
+  }
+, events: {
+    'click #projects-button': 'navProjects'
+  , 'click .email-me': 'showEmail'
+  }
+, navProjects: function() {
+    router.navigate('projects', {trigger: true})
+  }
+, showEmail: function(e) {
+    $(e.target).html('<input type="text" value="patrick.n.moody@gmail.com">')
   }
 })
 
@@ -34,6 +32,16 @@ var ProjectsView = Backbone.View.extend({
     _.each(this.model.models, function(project) {
       $('#projects').append(_.template(projectTemplate, project.attributes))
     })
+  }
+, events: {
+    'click #home-button': 'navHome'
+  , 'click .email-me': 'showEmail'
+  }
+, navHome: function() {
+    router.navigate('', {trigger: true})
+  }
+, showEmail: function(e) {
+    $(e.target).html('<input type="text" value="patrick.n.moody@gmail.com">')
   }
 })
 
