@@ -10,7 +10,6 @@ $(document).ready(function() {
 
   // Populate project info
   $.getJSON('projects.json', function(data) {
-    console.log(data)
     data.projects.forEach(function(project) {
       $('#projects').append(_.template(projectTemplate, project))
     })

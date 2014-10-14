@@ -1,13 +1,134 @@
 {
   "projects": [
-  {
-    "name": "test 1"
-  , "image": "http://placekitten.com"
-  , "description": "This is a description of the project"
-  }
-, {
-    "name": "test 1"
-  , "image": "http://placekitten.com"
-  , "description": "This is a description of the project"
-  }
-] }
+    {
+      "name": "HugeGif",
+      "image": "/images/hugegif.png",
+      "description": "<p>Created as the ultimate gif viewing experience.</p><p>The site is a reddit client built with backbone.js and is mobile friendly.</p>",
+      "links": [
+        {
+          "text": "Live Site",
+          "url": "http://hugegif.com"
+        },
+        {
+          "text": "Github",
+          "url": "https://github.com/patmood/hugegif"
+        }
+      ]
+    },
+    {
+      "name": "Vim Snake",
+      "image": "/images/vimsnake.png",
+      "description": "<p>Vim Snake is a quick and fun 1 day sprint project to explore HTML5 canvas. The game is built with canvas/javascript/jquery. I used sinatra for the backend and twitter for the login and leaderboard. </p><p>At the time of development, I was learning Vim and decided to use the same navigation controls for snake. The snake can only eat food in INSERT mode, and you cannot change direction until escaping INSERT mode</p><p>On August 16, Vim Snake made the <a href='https://news.ycombinator.com/item?id=6223946' target='_blank'>front page of Hacker News</a> which resulted in significant exposure and positive feedback.</p>",
+      "links": [
+        {
+          "text": "Live Site",
+          "url": "http://vimsnake.com"
+        },
+        {
+          "text": "Github",
+          "url": "https://github.com/patmood/vim_snake"
+        }
+      ]
+    },
+    {
+      "name": "Theme Matcher",
+      "image": "/images/themematcher.png",
+      "description": "<p>ThemeMatcher.com is an online tool for designers, website owners, and bloggers that automatically creates a WordPress theme from an existing site.</p><p>I've learnt and actioned all the skills required to take a product from conception to profitability, including product design, project management, development, marketing, customer support, and much more.</p>",
+      "links": [
+        {
+          "text": "Live Site",
+          "url": "http://themematcher.com"
+        }
+      ]
+    },
+    {
+      "name": "Viaggio",
+      "image": "/images/viaggio_preview.png",
+      "description": "<p>Meaning 'travel' in Italian, Viaggio is a Ruby on Rails web app that helps you showcase your favorite trips and adventures in a fun and immersive way. Photos are intelligently displayed on a map using the time and location metadata.</p><p>Built as a final project for Dev Bootcamp, I was responsible to for implementing OAuth, fetching and uploading photos using social media APIs, and setting up the rails application</p>",
+      "links": [
+        {
+          "text": "Github",
+          "url": "https://github.com/th7/journey-tracker"
+        }
+      ]
+    },
+    {
+      "name": "Fitness Interval Trainer",
+      "image": "/images/interval_trainer.png",
+      "description": "<p>Workout timer for a popular 7 minute workout. The site was made with mobile in mind, and works great when added as a shortcut on your smart phone.</p><p>To ensure great mobile performace, no images or libraries (such as jQuery and bootstrap) were used.</p><p>I personally used this app daily for 6 months when I didnt have access to a gym</p>",
+      "links": [
+        {
+          "text": "Live Site",
+          "url": "http://patmoody.com/interval_trainer/"
+        },
+        {
+          "text": "Github",
+          "url": "https://github.com/patmood/interval_trainer"
+        }
+      ]
+    },
+    {
+      "name": "Faceoff",
+      "image": "/images/faceoff_screenshot.png",
+      "description": "<p>This is a chrome extension I made to increase productivity by hiding your facebook news feed. This allows you to respond to messages and check notifications, without the distraction of the news feed.</p><p>Perfect for reducing time on facebook, without quitting cold turkey.</p>",
+      "links": [
+        {
+          "text": "Chrome Store",
+          "url": "https://chrome.google.com/webstore/detail/faceoff/mdlblgekglpphmgilnhmgnekfcndgngg"
+        }
+      ]
+    },
+    {
+      "name": "Command line Blackjack",
+      "image": "/images/blackjack.png",
+      "description": "<p>Game of 'command line blackjack' that supports multiple players, betting, doubling down, and splitting.</p><p>This ruby program is a demonstration of my coding ability and style. It was given to me as a coding challenge, and is complete with MVC style architecture and testing with rspec</p>",
+      "links": [
+        {
+          "text": "Github",
+          "url": "https://github.com/patmood/blackjack"
+        }
+      ]
+    },
+    {
+      "name": "Box Report",
+      "image": "/images/boxreport.png",
+      "description": "<p>Ever wondered what's taking up all that space in your Dropbox? Visualize and explore the contents of your Dropbox to easily find the files or folders taking up the most space.</p><p>I was responsible for the entire project. Site built with Sinatra. Authentication using Dropbox API. Graphs with Google Charts</p><p>The most interesting part of the project was getting the size of every folder, which involved recursively drilling into each folder and its contents to add up the total size.</p>",
+      "links": [
+        {
+          "text": "Github",
+          "url": "https://github.com/patmood/box_report"
+        }
+      ]
+    },
+    {
+      "name": "Scanned Look",
+      "image": "/images/scanned_look.png",
+      "description": "<p>Sinatra app that takes PDF or image files and manipulates them to appear printed/scanned.</p><p>It can handle multiple pages, and applies a blur, contrast, and random roataion. This project gave me good practice using system commands and also configuring nginx, unicorn and sinatra in a production environment.</p>",
+      "links": [
+        {
+          "text": "Live Site",
+          "url": "http://scannedlook.com"
+        },
+        {
+          "text": "Github",
+          "url": "https://github.com/patmood/scanned_look/"
+        }
+      ]
+    },
+    {
+      "name": "Interview with Stephen",
+      "image": "/images/interview.png",
+      "description": "<p>Need a little interview practice? Brush up on your data structures and algorithms with our eerily lifelike Stephen Hawking simulator!</p><p>Result of a 9 hour hackathon where I was responsible for Rails setup and front end.</p>",
+      "links": [
+        {
+          "text": "Github",
+          "url": "https://github.com/JasonBenn/interview_with_steve_hawking"
+        },
+        {
+          "text": "Live Site",
+          "url": "http://interview-with-stephen.herokuapp.com/"
+        }
+      ]
+    }
+  ]
+}
