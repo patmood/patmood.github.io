@@ -40,7 +40,7 @@ var ProjectsView = Backbone.View.extend({
 var AppRouter = Backbone.Router.extend({
   routes: {
     '': 'index'
-  , 'madebyme': 'projects'
+  , 'projects': 'projects'
   }
 , index: function() {
     new IndexView().render()
