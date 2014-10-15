@@ -5,3 +5,5 @@
 - Animate view transitions
 - DRY up the email button click handler
 - Put navigation and email button in the header
+- Clean up CSS and move to stylus
+- Compress assets

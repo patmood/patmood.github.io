@@ -1,5 +1,16 @@
 [
   {
+    "name": "Wobble Wockets",
+    "image": "/images/wobblewockets.png",
+    "description": "<p>Addictive rocket game built with HTML5/Javascript/canvas using the phaser.io framework</p><p>Wobble Wockets works in all browsers (desktop and mobile) and has is in the process of being published on iOS/Android by a game studio.</p><p>Making this game is probably the most fun I've ever had programming!</p>",
+    "links": [
+      {
+        "text": "Live Site",
+        "url": "http://wobblewockets.com"
+      }
+    ]
+  },
+  {
     "name": "HugeGif",
     "image": "/images/hugegif.png",
     "description": "<p>Created as the ultimate gif viewing experience.</p><p>The site is a reddit client built with backbone.js and is mobile friendly.</p>",
@@ -37,6 +48,21 @@
       {
         "text": "Live Site",
         "url": "http://themematcher.com"
+      }
+    ]
+  },
+  {
+    "name": "Escape Plan",
+    "image": "/images/escapeplan.png",
+    "description": "<p>I love to travel and dream of all the adventurous possibilities.</p><p>Escape Plan is a site for fellow daydreamers who fancy getting away as far away as possible.</p><p>The app uses the rome2rio API to work out how far away you can realistically get and also how to get there - complete with cost!</p><p>It was one of my early node/express projects and was good practice learning conventions and working with APIs.</p>",
+    "links": [
+      {
+        "text": "Live Site",
+        "url": "http://escapeplan.herokuapp.com/"
+      },
+      {
+        "text": "Github",
+        "url": "https://github.com/patmood/escape_plan"
       }
     ]
   },
