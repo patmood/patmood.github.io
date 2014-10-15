@@ -131,10 +131,6 @@
     "description": "<p>Sinatra app that takes PDF or image files and manipulates them to appear printed/scanned.</p><p>It can handle multiple pages, and applies a blur, contrast, and random roataion. This project gave me good practice using system commands and also configuring nginx, unicorn and sinatra in a production environment.</p>",
     "links": [
       {
-        "text": "Live Site",
-        "url": "http://scannedlook.com"
-      },
-      {
         "text": "Github",
         "url": "https://github.com/patmood/scanned_look/"
       }
