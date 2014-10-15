@@ -33,6 +33,7 @@
     "list": [
       "Git"
     , "Vim + Tmux"
+    , "Fish Shell"
     , "Rspec + Guard"
     , "Gulp/Grunt"
     , "Browserify"
