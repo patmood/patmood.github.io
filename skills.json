@@ -1,0 +1,51 @@
+[
+  {
+    "type": "Languages",
+    "list": [
+      "Ruby"
+    , "Javascript"
+    , "Python"
+    ]
+  },
+  {
+    "type": "Databases",
+    "list": [
+      "Postgres"
+    , "Mongo"
+    , "Redis"
+    ]
+  },
+  {
+    "type": "Frameworks",
+    "list": [
+      "Rails"
+    , "Sinatra"
+    , "Node.js"
+    , "Express.js"
+    , "Ember.js"
+    , "Backbone.js"
+    , "Phaser.io"
+    , "WordPress"
+    ]
+  },
+  {
+    "type": "Tools & Workflow",
+    "list": [
+      "Git"
+    , "Vim + Tmux"
+    , "Rspec + Guard"
+    , "Gulp/Grunt"
+    , "Browserify"
+    , "Stylus"
+    ]
+  },
+  {
+    "type": "Services",
+    "list": [
+      "Github"
+    , "Heroku"
+    , "Circle.ci"
+    , "Trello"
+    ]
+  }
+]

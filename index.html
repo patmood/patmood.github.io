@@ -13,7 +13,7 @@
   <script type="text/template" id="index-template">
     <div class="title">
       <h1>Hi, I'm Patrick!</h1>
-      <h2>I make web apps</h2>
+      <h2>I make full stack web apps</h2>
       <p class="text-center">I like gifs, anything with coconut in it, the smell of fresh cut lawn, and I think <a href="http://www.youtube.com/watch?v=4Ri5cszSKEg" target="_blank">this</a> is the funniest video on the internet. If you like <a href="https://soundcloud.com/flume/the-mixtape" target="_blank">Flume</a> or <a href="http://www.youtube.com/watch?v=HlAS68SGFcA" target="_blank">The Smith Street Band</a> we can definitely be friends!</p>
     </div>
     <div class="container">
@@ -22,7 +22,7 @@
       </div>
       <div class="right_col">
         <button class="button" id="projects-button">Things I've built</button>
-
+        <button class="button" id="skills-button">Skills</button>
         <ul class="icons">
           <li><i class="icon-map-marker"></i>San Francisco, CA</li>
           <li>
@@ -44,6 +44,37 @@
 
         <div class="email-me clicky">Email Me!</div>
       </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="skills-template">
+    <div class="title">
+      <h1>Skills</h1>
+      <button class="button" id="home-button">Home</button>
+    </div>
+
+    <div class="container">
+      <p>These are tools and technologies I work with regularly:</p>
+      <table>
+        <thead>
+          <tr>
+            <% _.each(models, function(model) { %>
+            <th>
+              <%= model.get('type') %>
+            </th>
+            <% }) %>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <% _.each(models, function(model) { %>
+            <td>
+              <%= model.get('list').join('<br>') %>
+            </td>
+            <% }) %>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </script>
 

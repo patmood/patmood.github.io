@@ -3,6 +3,10 @@ var Projects = Backbone.Collection.extend({
   url: '/projects.json'
 })
 
+var Skills = Backbone.Collection.extend({
+  url: '/skills.json'
+})
+
 var IndexView = Backbone.View.extend({
   el: '#content'
 , render: function() {
@@ -11,10 +15,32 @@ var IndexView = Backbone.View.extend({
   }
 , events: {
     'click #projects-button': 'navProjects'
+  , 'click #skills-button': 'navSkills'
   , 'click .email-me': 'showEmail'
   }
 , navProjects: function() {
     router.navigate('projects', {trigger: true})
+  }
+, navSkills: function() {
+    router.navigate('skills', {trigger: true})
+  }
+, showEmail: function(e) {
+    $(e.target).html('<input type="text" value="patrick.n.moody@gmail.com">')
+  }
+})
+
+var SkillsView = Backbone.View.extend({
+  el: '#content'
+, render: function() {
+    var template = _.template($('#skills-template').html(), this.model)
+    this.$el.html(template)
+  }
+, events: {
+    'click #home-button': 'navHome'
+  , 'click .email-me': 'showEmail'
+  }
+, navHome: function() {
+    router.navigate('', {trigger: true})
   }
 , showEmail: function(e) {
     $(e.target).html('<input type="text" value="patrick.n.moody@gmail.com">')
@@ -49,6 +75,7 @@ var AppRouter = Backbone.Router.extend({
   routes: {
     '': 'index'
   , 'projects': 'projects'
+  , 'skills': 'skills'
   }
 , index: function() {
     new IndexView().render()
@@ -58,6 +85,14 @@ var AppRouter = Backbone.Router.extend({
     projects.fetch({
       success: function(projects) {
         new ProjectsView({ model: projects }).render()
+      }
+    })
+  }
+, skills: function() {
+    var skills = new Skills()
+    skills.fetch({
+      success: function(skills) {
+        new SkillsView({ model: skills }).render()
       }
     })
   }

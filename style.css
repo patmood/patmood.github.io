@@ -161,3 +161,24 @@ li:hover a { color: #444; }
 .text-center {
   text-align: center;
 }
+table {
+  border: solid 1px #ddd;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+td, th {
+  margin: 0px;
+  padding: 0.5em;
+  border-left: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+}
+td:first-child, th:first-child {
+  border-left: none;
+}
+tr:last-child td {
+  border-bottom: none;
+}
