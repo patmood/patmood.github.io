@@ -26,6 +26,7 @@ a:hover, a:focus {
 p {
   font-size: 18px;
   color: #444;
+  text-align: left;
 }
 .container {
   max-width: 800px;
@@ -125,6 +126,7 @@ li:hover a { color: #444; }
   border-radius: 5px;
   cursor: pointer;
   margin-right: 5px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   box-shadow: 0 6px #2980b9;
 }
@@ -155,5 +157,7 @@ li:hover a { color: #444; }
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-
+}
+.text-center {
+  text-align: center;
 }

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Patrick Moody</title>
 	<link rel="stylesheet" href="style.css">
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
   <div id="content"></div>
@@ -14,7 +14,7 @@
     <div class="title">
       <h1>Hi, I'm Patrick!</h1>
       <h2>I make web apps</h2>
-      <p>I like gifs, anything with coconut in it, the smell of fresh cut lawn, and I think <a href="http://www.youtube.com/watch?v=4Ri5cszSKEg" target="_blank">this</a> is the funniest video on the internet. If you like <a href="https://soundcloud.com/flume/the-mixtape" target="_blank">Flume</a> or <a href="http://www.youtube.com/watch?v=HlAS68SGFcA" target="_blank">The Smith Street Band</a> we can definitely be friends!</p>
+      <p class="text-center">I like gifs, anything with coconut in it, the smell of fresh cut lawn, and I think <a href="http://www.youtube.com/watch?v=4Ri5cszSKEg" target="_blank">this</a> is the funniest video on the internet. If you like <a href="https://soundcloud.com/flume/the-mixtape" target="_blank">Flume</a> or <a href="http://www.youtube.com/watch?v=HlAS68SGFcA" target="_blank">The Smith Street Band</a> we can definitely be friends!</p>
     </div>
     <div class="container">
       <div class="left_col">
@@ -51,6 +51,7 @@
     <div class="title">
       <h1>Things I've Built</h1>
       <button class="button" id="home-button">Home</button>
+      <p>I'm always working on something. These are some of my side projects that came about from the desire to learn something new, build something I wanted, or just for fun!</p>
     </div>
 
     <div class="container">
@@ -64,10 +65,12 @@
     <div class="site-preview">
       <h2><%= name %></h2>
       <img src=<%= image %> alt=<%= name %>>
-      <%= description %>
-      <% _.each(links, function(link) { %>
-      <a href=<%= link.url %> target="_blank" class="button"><%= link.text %></a>
-      <% }) %>
+      <div class="text-center">
+        <%= description %>
+        <% _.each(links, function(link) { %>
+        <a href=<%= link.url %> target="_blank" class="button"><%= link.text %></a>
+        <% }) %>
+      </div>
     </div>
   </script>
 
