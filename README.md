@@ -3,7 +3,6 @@
 
 ## TODO
 - Animate view transitions
-- DRY up the email button click handler
-- Put navigation and email button in the header
+- Unbind view events when changing views http://lostechies.com/derickbailey/2011/09/15/zombies-run-managing-page-transitions-in-backbone-apps/
 - Clean up CSS and move to stylus
 - Compress assets
