@@ -29,45 +29,53 @@ var IndexView = Backbone.View.extend({
   }
 })
 
-var SkillsView = Backbone.View.extend({
+var HeaderView = Backbone.View.extend({
   el: '#content'
 , render: function() {
-    var template = _.template($('#skills-template').html(), this.model)
+    var template = _.template( $('#header-template').html())
     this.$el.html(template)
   }
 , events: {
     'click #home-button': 'navHome'
+  , 'click #projects-button': 'navProjects'
+  , 'click #skills-button': 'navSkills'
   , 'click .email-me': 'showEmail'
   }
 , navHome: function() {
     router.navigate('', {trigger: true})
+  }
+, navProjects: function() {
+    router.navigate('projects', {trigger: true})
+  }
+, navSkills: function() {
+    router.navigate('skills', {trigger: true})
   }
 , showEmail: function(e) {
     $(e.target).html('<input type="text" value="patrick.n.moody@gmail.com">')
   }
 })
 
+var SkillsView = Backbone.View.extend({
+  el: '#content'
+, render: function() {
+    new HeaderView().render()
+    var template = _.template($('#skills-template').html(), this.model)
+    this.$el.append(template)
+  }
+})
+
 var ProjectsView = Backbone.View.extend({
   el: '#content'
 , render: function() {
+    new HeaderView().render()
     var template = _.template($('#projects-template').html(), this.model)
-    this.$el.html(template)
+    this.$el.append(template)
 
     // TODO: Render a individual project views here
     var projectTemplate = $('#project-template').html()
     _.each(this.model.models, function(project) {
       $('#projects').append(_.template(projectTemplate, project.attributes))
     })
-  }
-, events: {
-    'click #home-button': 'navHome'
-  , 'click .email-me': 'showEmail'
-  }
-, navHome: function() {
-    router.navigate('', {trigger: true})
-  }
-, showEmail: function(e) {
-    $(e.target).html('<input type="text" value="patrick.n.moody@gmail.com">')
   }
 })
 
