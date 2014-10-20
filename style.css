@@ -3,6 +3,7 @@
 
 body {
   font-family: Lato, Helvetica, Arial, sans-serif;
+  margin: 0px;
 }
 h1 {
 	font-size: 60px;
@@ -15,6 +16,7 @@ h2 {
   font-size: 24px;
   font-family: 'Cabin Condensed', sans-serif;
   color: #222;
+  text-transform: uppercase;
 }
 a {
   color: #428bca;
@@ -33,7 +35,6 @@ p {
   max-width: 800px;
 	margin: auto;
 	margin-bottom: 100px;
-  back
 }
 .title {
   text-align: center;

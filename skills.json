@@ -10,7 +10,7 @@
   {
     "type": "Databases",
     "list": [
-      "Postgres"
+      "Postgres/SQL"
     , "Mongo"
     , "Redis"
     ]
