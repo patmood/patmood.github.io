@@ -107,4 +107,4 @@ var AppRouter = Backbone.Router.extend({
 })
 
 var router = new AppRouter()
-Backbone.history.start()
+Backbone.history.start({ pushState: true })
