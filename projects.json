@@ -1,5 +1,16 @@
 [
   {
+    "name": "Git Time Machine",
+    "image": "/images/time_machine.png",
+    "description": "<p>[WORK IN PROGRESS] This is a feature I always wanted on Github, so I decided to build it as a browser extension/external app.</p><p>It allows you to view the git history in the context of a single file. So you can view the entire file contents and go back through commits to visualize how it has changed.</p><p>The coolest thing about this app is that authenticated requests are made directly to the github API from the client (Backbone.js), without the need to go through my server. All requests are also cached in local storage, making for a really fast and responsive experience</p>",
+    "links": [
+      {
+        "text": "Live Site",
+        "url": "http://time-machine.herokuapp.com/"
+      }
+    ]
+  },
+  {
     "name": "Wobble Wockets",
     "image": "/images/wobblewockets.png",
     "description": "<p>Addictive rocket game built with HTML5/Javascript/canvas using the phaser.io framework</p><p>Wobble Wockets works in all browsers (desktop and mobile) and has is in the process of being published on iOS/Android by a game studio.</p><p>Making this game is probably the most fun I've ever had programming!</p>",
