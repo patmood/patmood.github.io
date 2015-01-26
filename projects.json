@@ -15,6 +15,17 @@
     ]
   },
   {
+    "name": "Middle School Game Class",
+    "image": "/images/game_class.jpg",
+    "description": "<p>In January 2014 I taught a class of 10 middleschool students the basics of making games. We built the classic 'Flappy Bird' game using Game Salad, and then went on to make custom individual games from scratch for entry in the STEM compeition.</p>",
+    "links": [
+      {
+        "text": "Github Notes",
+        "url": "https://github.com/patmood/flappy-salad"
+      }
+    ]
+  },
+  {
     "name": "Wobble Wockets",
     "image": "/images/wobblewockets.png",
     "description": "<p>Addictive rocket game built with HTML5/Javascript/canvas using the phaser.io framework</p><p>Wobble Wockets works in all browsers (desktop and mobile) and has is in the process of being published on iOS/Android by a game studio.</p><p>Making this game is probably the most fun I've ever had programming!</p>",
