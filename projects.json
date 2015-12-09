@@ -1,5 +1,20 @@
 [
   {
+    "name": "Passport Ready Photo",
+    "image": "/images/passport-ready-photo.jpg",
+    "description": "<p>Photo shops charge around $20 for a set of passport photos! This tool crops and sizes your photo so you can print it cheaply at a standard kiosk.</p>",
+    "links": [
+      {
+        "text": "Live Site",
+        "url": "http://www.passportreadyphoto.com/"
+      },
+      {
+        "text": "Github",
+        "url": "https://github.com/patmood/passport-photo"
+      }
+    ]
+  },
+  {
     "name": "Git Time Machine",
     "image": "/images/time_machine.png",
     "description": "<p>[WORK IN PROGRESS] This is a feature I always wanted on Github, so I decided to build it as a browser extension/external app.</p><p>It allows you to view the git history in the context of a single file. So you can view the entire file contents and go back through commits to visualize how it has changed.</p><p>The coolest thing about this app is that authenticated requests are made directly to the github API from the client (Backbone.js), without the need to go through my server. All requests are also cached in local storage, making for a really fast and responsive experience</p>",
@@ -17,7 +32,7 @@
   {
     "name": "Middle School Game Class",
     "image": "/images/game_class.jpg",
-    "description": "<p>In January 2014 I taught a class of 10 middleschool students the basics of making games. We built the classic 'Flappy Bird' game using Game Salad, and then went on to make custom individual games from scratch for entry in the STEM compeition.</p>",
+    "description": "<p>In January 2014 I taught a class of 10 middleschool students the basics of making games. We built the classic 'Flappy Bird' game using Game Salad, and then went on to make custom individual games from scratch for entry in the STEM competition.</p>",
     "links": [
       {
         "text": "Github Notes",
