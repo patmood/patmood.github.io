@@ -20,12 +20,12 @@
     </style>
   </head>
   <body class="flex items-center content-center flex-col">
-    <main class="text-lg">
+    <main class="page-width">
       <header class="text-center">
         <h1>Hi, I'm Patrick!</h1>
         <h2>I make full stack web apps</h2>
       </header>
-      <section class="flex items-center flex-wrap content-center">
+      <section class="flex items-center flex-wrap content-center text-lg">
         <div style="max-width: 200px;">
           <img src="images/me.jpg" class="circle shadow fit" />
         </div>
@@ -56,6 +56,47 @@
           </li>
         </ul>
       </section>
+      <section id="projects" class="m-4">
+        <div class="text-center">
+          <button
+            id="show-projects"
+            class="text-base p-2 bg-transparent border-none cursor-pointer underline"
+          >
+            Some Things I've made...
+          </button>
+        </div>
+      </section>
     </main>
+
+    <script>
+      var projectsEl = document.getElementById('projects')
+      // Triggered by projects.js
+      function jsonCallback(projects) {
+        // Debug
+        // renderProjects(projects)
+
+        document
+          .getElementById('show-projects')
+          .addEventListener('click', function() {
+            renderProjects(projects)
+          })
+      }
+
+      function renderProjects(projects) {
+        console.log({ projects })
+        var template = projects
+          .map(function(p) {
+            return `<div>
+              <h3 class="bold"><a href="${
+                p.url
+              }" target="_blank" class="link mr-3">${p.name}</a></h3>
+              <div>${p.description}</div>
+            </div>`
+          })
+          .join('')
+        projectsEl.innerHTML = template
+      }
+    </script>
+    <script src="projects.js" type="text/javascript" async></script>
   </body>
 </html>
