@@ -1,136 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Patrick Moody</title>
-	<link rel="stylesheet" href="style.css">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body>
-  <div id="content"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Patrick Moody</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="content"></div>
 
-  <!-- TEMPLATES -->
-  <script type="text/template" id="index-template">
-    <div class="title">
-      <h1>Hi, I'm Patrick!</h1>
-      <h2>I make full stack web apps</h2>
-      <p class="text-center">I like gifs, anything with coconut in it, the smell of fresh cut lawn, and I think <a href="http://www.youtube.com/watch?v=4Ri5cszSKEg" target="_blank">this</a> is the funniest video on the internet. If you like <a href="https://www.youtube.com/watch?v=uP1z9kQPtU4" target="_blank">Courtney Barnett</a> or <a href="https://www.youtube.com/watch?v=dKCpPWEvZJ0" target="_blank">Hockey Dad</a> we can definitely be friends!</p>
-    </div>
-    <div class="container">
-      <div class="left_col">
-        <img src="images/me.jpg" alt="Patrick Moody" class="circle-wrap" >
+    <!-- TEMPLATES -->
+    <script type="text/template" id="index-template">
+      <div class="title">
+        <h1>Hi, I'm Patrick!</h1>
+        <h2>I make full stack web apps</h2>
+        <p class="text-center">I like gifs, anything with coconut in it, the smell of fresh cut lawn, and I think <a href="http://www.youtube.com/watch?v=4Ri5cszSKEg" target="_blank">this</a> is the funniest video on the internet. If you like <a href="https://www.youtube.com/watch?v=uP1z9kQPtU4" target="_blank">Courtney Barnett</a> or <a href="https://www.youtube.com/watch?v=dKCpPWEvZJ0" target="_blank">Hockey Dad</a> we can definitely be friends!</p>
       </div>
-      <div class="right_col">
-        <button class="button" id="projects-button">Things I've built</button>
-        <!--
-        <button class="button" id="skills-button">Skills</button>
-        -->
-        <ul class="icons">
-          <li><i class="fa fa-map-marker"></i>San Francisco, California</li>
-          <li><i class="fa fa-home"></i>Adelaide, South Australia</li>
-          <li>
-            <a href="http://linkedin.com/in/patrickmoody/" target="_blank">
-              <i class="fa fa-linkedin"></i>LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/patmood" target="_blank">
-              <i class="fa fa-github"></i>Github
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/patmood" target="_blank">
-              <i class="fa fa-twitter"></i>Twitter
-            </a>
-          </li>
-        </ul>
-
-        <div class="email-me">Email Me!</div>
+      <div class="container">
+        <div class="left_col">
+          <img src="images/me.jpg" alt="Patrick Moody" class="circle-wrap" >
+        </div>
+        <div class="right_col">
+          <button class="button" id="projects-button">Things I've built</button>
+          <!--
+          <button class="button" id="skills-button">Skills</button>
+          -->
+          <ul class="icons">
+            <li><i class="fa fa-map-marker"></i>San Francisco, California</li>
+            <li><i class="fa fa-home"></i>Adelaide, South Australia</li>
+            <li>
+              <a href="http://linkedin.com/in/patrickmoody/" target="_blank">
+                <i class="fa fa-linkedin"></i>LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/patmood" target="_blank">
+                <i class="fa fa-github"></i>Github
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/patmood" target="_blank">
+                <i class="fa fa-twitter"></i>Twitter
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </script>
+    </script>
 
-  <script type="text/template" id="header-template">
-    <div id="header">
-      <div class="header-text">Patrick Moody</div>
-      <div class="nav">
-        <button class="button" id="home-button">Contact</button>
-        <button class="button" id="projects-button">Projects</button>
-        <!-- <button class="button" id="skills-button">Skills</button> -->
+    <script type="text/template" id="header-template">
+      <div id="header">
+        <div class="header-text">Patrick Moody</div>
+        <div class="nav">
+          <button class="button" id="home-button">Contact</button>
+          <button class="button" id="projects-button">Projects</button>
+          <!-- <button class="button" id="skills-button">Skills</button> -->
+        </div>
       </div>
-    </div>
-  </script>
+    </script>
 
-  <script type="text/template" id="skills-template">
-    <div class="title">
-      <h1>Skills</h1>
-    </div>
-
-    <div class="container">
-      <p>I am constantly creating, and I pride myself on <em>getting shit done</em>, finishing projects, and making something valuable.</p>
-      <p>I actively seek feedback, best practices, and new ways to solve problems so I can consistently improve.</p>
-      <p>These are tools and technologies I work with regularly:</p>
-      <table>
-        <thead>
-          <tr>
-            <% _.each(models, function(model) { %>
-            <th>
-              <%= model.get('type') %>
-            </th>
-            <% }) %>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <% _.each(models, function(model) { %>
-            <td>
-              <%= model.get('list').join('<br>') %>
-            </td>
-            <% }) %>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </script>
-
-  <script type="text/template" id="projects-template">
-    <div class="title">
-      <h1>Things I've Built</h1>
-      <p>I'm always working on something. These are some of my side projects that came about from the desire to learn something new, build something I wanted, or just for fun!</p>
-    </div>
-
-    <div class="container">
-      <div id="projects"></div>
-    </div>
-  </script>
-
-  <script type="text/template" id="project-template">
-    <div class="site-preview">
-      <h2><%= name %></h2>
-      <img src=<%= image %> alt=<%= name %>>
-      <div class="text-center">
-        <%= description %>
-        <% _.each(links, function(link) { %>
-        <a href=<%= link.url %> target="_blank" class="button"><%= link.text %></a>
-        <% }) %>
+    <script type="text/template" id="skills-template">
+      <div class="title">
+        <h1>Skills</h1>
       </div>
-    </div>
-  </script>
 
-  <!-- SCRIPTS -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
-  <script src="/script.js"></script>
-  <!-- Analytics -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-48445639-1', 'patmoody.com');
-    ga('send', 'pageview');
-  </script>
+      <div class="container">
+        <p>I am constantly creating, and I pride myself on <em>getting shit done</em>, finishing projects, and making something valuable.</p>
+        <p>I actively seek feedback, best practices, and new ways to solve problems so I can consistently improve.</p>
+        <p>These are tools and technologies I work with regularly:</p>
+        <table>
+          <thead>
+            <tr>
+              <% _.each(models, function(model) { %>
+              <th>
+                <%= model.get('type') %>
+              </th>
+              <% }) %>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <% _.each(models, function(model) { %>
+              <td>
+                <%= model.get('list').join('<br>') %>
+              </td>
+              <% }) %>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </script>
 
-</body>
+    <script type="text/template" id="projects-template">
+      <div class="title">
+        <h1>Things I've Built</h1>
+        <p>I'm always working on something. These are some of my side projects that came about from the desire to learn something new, build something I wanted, or just for fun!</p>
+      </div>
+
+      <div class="container">
+        <div id="projects"></div>
+      </div>
+    </script>
+
+    <script type="text/template" id="project-template">
+      <div class="site-preview">
+        <h2><%= name %></h2>
+        <img src=<%= image %> alt=<%= name %>>
+        <div class="text-center">
+          <%= description %>
+          <% _.each(links, function(link) { %>
+          <a href=<%= link.url %> target="_blank" class="button"><%= link.text %></a>
+          <% }) %>
+        </div>
+      </div>
+    </script>
+
+    <!-- SCRIPTS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="/script.js"></script>
+    <!-- Analytics -->
+    <script>
+      ;(function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r
+        ;(i[r] =
+          i[r] ||
+          function() {
+            ;(i[r].q = i[r].q || []).push(arguments)
+          }),
+          (i[r].l = 1 * new Date())
+        ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+        a.async = 1
+        a.src = g
+        m.parentNode.insertBefore(a, m)
+      })(
+        window,
+        document,
+        'script',
+        '//www.google-analytics.com/analytics.js',
+        'ga'
+      )
+      ga('create', 'UA-48445639-1', 'patmoody.com')
+      ga('send', 'pageview')
+    </script>
+  </body>
 </html>
