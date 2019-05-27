@@ -72,9 +72,6 @@
       var projectsEl = document.getElementById('projects')
       // Triggered by projects.js
       function jsonCallback(projects) {
-        // Debug
-        // renderProjects(projects)
-
         document
           .getElementById('show-projects')
           .addEventListener('click', function() {
@@ -83,7 +80,6 @@
       }
 
       function renderProjects(projects) {
-        console.log({ projects })
         var template = projects
           .map(function(p) {
             return `<div>
