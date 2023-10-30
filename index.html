@@ -3,96 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="//patmood.github.io/utecss/ute.css" rel="stylesheet" />
     <title>Patrick Moody</title>
     <style>
-      .icon {
-        height: 1.5em;
+      /* RESET */
+      *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+        all: unset;
+        display: revert;
       }
-      .monospace {
-        font-family: monospace;
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
       }
-      .link {
+      img {
+        max-width: 100%;
+      }
+
+      /* Variables */
+      :root {
+        --color: Peru;
+        --color-hover: SandyBrown;
+      }
+
+      /* Global */
+      html {
+        /* try and get a nice google font the user already has cached, but dont slow down the page by downloading one */
+        font-family: "Lora", "Merriweather", "PT Serif", "Noto Serif",
+          "Libre Baskerville" serif;
+        font-size: 100%;
+        color: #444;
+      }
+      body {
+        font-size: 1.4rem;
+        line-height: 1.5em;
+      }
+      /* Layout */
+      main {
+        padding: 1rem;
+      }
+      /* Expander */
+      summary,
+      details {
+        display: inline-block;
+      }
+      summary {
+        text-decoration: underline;
+        /* text-decoration-style: dashed; */
+        text-decoration-color: var(--color);
+        text-decoration-thickness: 2px;
+        cursor: pointer;
+        color: var(--color);
+      }
+      summary:hover {
+        color: var(--color-hover);
+        text-decoration-color: var(--color-hover);
+      }
+      details[open] summary {
+        color: unset;
         text-decoration: none;
-        color: #428bca;
+        pointer-events: none;
       }
     </style>
   </head>
-  <body class="flex items-center content-center flex-col">
-    <main class="page-width">
-      <header class="text-center">
-        <h1>Hi, I'm Patrick!</h1>
-        <h2>I make full stack web apps</h2>
-      </header>
-      <section class="flex items-center flex-wrap content-center text-lg">
-        <div style="max-width: 200px;">
-          <img src="images/me.jpg" class="circle shadow fit" />
-        </div>
-        <ul class="list-reset monospace p-3">
-          <li class="flex items-center mb-2">
-            <img src="images/icons/pin.svg" class="icon mr-2" /><span
-              >San Francisco, California</span
-            >
-          </li>
-          <li class="flex items-center mb-2">
-            <img src="images/icons/home.svg" class="icon mr-2" /><span
-              >Adelaide, South Australia</span
-            >
-          </li>
-          <li class="flex items-center mb-2">
-            <img src="images/icons/linkedin.svg" class="icon mr-2" /><a
-              href="https://linkedin.com/in/patrickmoody/"
-              class="link"
-              >LinkedIn</a
-            >
-          </li>
-          <li class="flex items-center mb-2">
-            <img src="images/icons/github.svg" class="icon mr-2" /><a
-              href="https://github.com/patmood"
-              class="link"
-              >Github</a
-            >
-          </li>
-        </ul>
-      </section>
-      <section id="projects" class="m-4">
-        <div class="text-center">
-          <button
-            id="show-projects"
-            class="text-base p-2 bg-transparent border-none cursor-pointer underline"
-          >
-            Some Things I've made...
-          </button>
-        </div>
-      </section>
+  <body>
+    <main>
+      <p>Hi, I'm Patrick</p>
+      <span>
+        I'm a
+        <details>
+          <summary>software engineer</summary>
+          (frontend mostly)
+        </details>
+      </span>
+      <p>Contact me</p>
     </main>
-
-    <script>
-      var projectsEl = document.getElementById('projects')
-      // Triggered by projects.js
-      function jsonCallback(projects) {
-        document
-          .getElementById('show-projects')
-          .addEventListener('click', function() {
-            renderProjects(projects)
-          })
-      }
-
-      function renderProjects(projects) {
-        var template = projects
-          .map(function(p) {
-            return `<div>
-              <h3 class="bold"><a href="${
-                p.url
-              }" target="_blank" class="link mr-3">${p.name}</a></h3>
-              <div>${p.description}</div>
-            </div>`
-          })
-          .join('')
-        projectsEl.innerHTML = template
-      }
-    </script>
-    <script src="projects.js" type="text/javascript" async></script>
   </body>
 </html>
