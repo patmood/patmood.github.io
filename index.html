@@ -77,7 +77,7 @@
       }
       /* Site specific styling */
       .hidden {
-        display: inline-block;
+        position: absolute;
         height: 0px;
         width: 0px;
         overflow: hidden;
@@ -88,7 +88,7 @@
         transition-timing-function: ease-in-out;
       }
       .reveal {
-        display: initial;
+        position: initial;
         height: auto;
         width: auto;
         opacity: 1;
@@ -115,32 +115,59 @@
         I have 10 years
         <a href="#" data-reveal="exp" class="link-reveal">experience</a> in
         Silicon Valley.
-        <span id="exp" class="hidden">
-          This includes Robinhood, Dropbox, and a number of smaller
-          startups</span
-        >
       </p>
+      <ul id="exp" class="hidden">
+        <li>
+          <a href="#" data-reveal="robinhood" class="link-reveal">Robinhood</a
+          ><span id="robinhood" class="hidden">
+            - Lead the Retirement web team, helped build scalable cross-platform
+            customer support flows, and supported clearing operations on the
+            Business Automation team.</span
+          >
+        </li>
+        <li>
+          <a href="#" data-reveal="dropbox" class="link-reveal">Dropbox</a
+          ><span id="dropbox" class="hidden">
+            - Built web experiments to increase Plus account subsriptions and
+            reduce churn, adding millions to company revenue.</span
+          >
+        </li>
+        <li>
+          <a href="#" data-reveal="kamcord" class="link-reveal">Kamcord</a
+          ><span id="kamcord" class="hidden">
+            - Build (and pivoted) the entire web product for Kamcord, a company
+            which was later acquired by Lyft</span
+          >
+        </li>
+        <li>
+          <a href="#" data-reveal="verdigris" class="link-reveal">Verdigris</a
+          ><span id="verdigris" class="hidden">
+            - Worked as one of 3 full stack developers on a dashboard to view
+            commercial building energy consumption and automation.</span
+          >
+        </li>
+      </ul>
       <p>
         If you're looking for a product focused engineer,
         <a href="#" data-reveal="contact" class="link-reveal">get in touch</a>
       </p>
-      <div id="contact" class="hidden">
-        <ul>
-          <li id="email">Email</li>
-          <li>
-            <a href="https://linkedin.com/in/patrickmoody/" target="_blank"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/patmood" target="_blank">Github</a>
-          </li>
-        </ul>
-      </div>
+      <ul id="contact" class="hidden">
+        <li>
+          <a id="email"></a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/patrickmoody/" target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/patmood" target="_blank">Github</a>
+        </li>
+      </ul>
     </main>
     <script>
       // anti scraping
-      const email = "cGF0cmljay5uLm1vb2R5QGdtYWlsLmNvbQ=="
+      const encodedEmail = "cGF0cmljay5uLm1vb2R5QGdtYWlsLmNvbQ=="
       function reveal() {
         try {
           const target = document.getElementById(this.dataset.reveal)
@@ -154,7 +181,10 @@
 
           // reveal email address
           if (target.id === "contact") {
-            document.getElementById("email").innerText = atob(email)
+            const emailStr = atob(encodedEmail)
+            const emailEl = document.getElementById("email")
+            emailEl.href = `mailto:${emailStr}?subject=I'd love to work with you!`
+            emailEl.innerText = emailStr
           }
         } catch (error) {
           console.error(error)
