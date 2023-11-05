@@ -178,26 +178,22 @@
     <script>
       // anti scraping
       const encodedEmail = "cGF0cmljay5uLm1vb2R5QGdtYWlsLmNvbQ=="
-      function reveal() {
-        try {
-          const target = document.getElementById(this.dataset.reveal)
-          target.classList.add("reveal")
-          // this.classList.remove("link-reveal")
+      function reveal(e) {
+        e.preventDefault()
+        const target = document.getElementById(this.dataset.reveal)
+        target.classList.add("reveal")
 
-          // replace link
-          const replacement = document.createElement("span")
-          replacement.innerHTML = this.innerHTML
-          this.parentNode.replaceChild(replacement, this)
+        // replace link
+        const replacement = document.createElement("span")
+        replacement.innerHTML = this.innerHTML
+        this.parentNode.replaceChild(replacement, this)
 
-          // reveal email address
-          if (target.id === "contact") {
-            const emailStr = atob(encodedEmail)
-            const emailEl = document.getElementById("email")
-            emailEl.href = `mailto:${emailStr}?subject=I'd love to work with you!`
-            emailEl.innerText = emailStr
-          }
-        } catch (error) {
-          console.error(error)
+        // reveal email address
+        if (target.id === "contact") {
+          const emailStr = atob(encodedEmail)
+          const emailEl = document.getElementById("email")
+          emailEl.href = `mailto:${emailStr}?subject=I'd love to work with you!`
+          emailEl.innerText = emailStr
         }
       }
       document
