@@ -22,8 +22,9 @@
 
       /* Variables */
       :root {
-        --link-color: rgb(228, 59, 46);
-        --link-color-hover: rgb(228, 59, 46);
+        --link-color: rgb(53, 142, 175);
+        --link-color-hover: rgba(53, 142, 175, 0.75);
+        --transition-duration: 0.3s;
       }
 
       /* Global */
@@ -46,6 +47,11 @@
         cursor: pointer;
         color: var(--link-color);
         text-decoration: underline;
+        transition-property: color;
+        transition-duration: var(--transition-duration);
+      }
+      a:hover {
+        color: var(--link-color-hover);
       }
       a.link-reveal {
         text-decoration: unset;
@@ -61,14 +67,14 @@
         bottom: 0px;
         width: 100%;
         z-index: -1;
-        transition: all 0.3s ease-in-out;
+        transition: all var(--transition-duration) ease-in-out;
         height: 110%;
         transform: skewX(-10deg);
       }
       a.link-reveal:hover::before {
         height: 3px;
         bottom: 0px;
-        background-color: hsla(196, 61%, 58%, 0.75);
+        background-color: var(--link-color);
         transform: skewX(0deg);
       }
       /* Layout */
